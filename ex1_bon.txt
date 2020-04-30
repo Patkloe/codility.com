@@ -1,0 +1,31 @@
+function dec2bin(dec){
+    return (dec >>> 0).toString(2);
+} // function to convert a number to a binary value.
+
+let t=dec2bin(8);  let s=t.length; console.log("size string" + " " + s + " "+ "binary number :" + " " + t +"\n");
+// now get to code the gab between binary value generated 
+let deb = 0; // pour initialiser le compteur
+let max = 0; // qui se changera
+let maxv=0;
+let size = 1;
+
+if(t[deb] =="1")  //start the first binary value of the array , then size = deb + 1, si difference trouvee
+  { 
+   while(size < s )
+        {
+         if(t[deb] != t[size])
+           {
+             maxv++;
+             max = maxv++;
+             deb = size;
+           }
+           else
+               {
+                  deb = size;
+               }
+         size++;
+        }
+    
+  } // end  if  (t[deb] == "1")
+       
+console.log("gap" + " " + max);
