@@ -1,51 +1,7 @@
-let tab = ["a","b","c","d","e","f","g"];
-var size = tab.length;
-let i = 0;
-var k = 0;
-let nbre = 0;
-let permut1 = 0;
-let permut2 = 0
-var taille = size;
-while(i < size)
-     { 
-       if(i == 0)
-         {
-           console.log("size tableau" + " " + taille)
-             //permutation
-           permut1 = tab[0];
-           tab[0] = tab[size-1];
-           tab[size-1] = permut1;
-         }
-         /*else
-            {
-            k = i + 1;
-            if(tab[k])
-             {
-               tab[k]= tab[i];
-             }
-           }*/
-       i++;
-      } // end while
-tab;
-   
-/*
-                                                         n = 7
 
-tab1     0,1,2,3,5,6,7
-
-pos  0 1 2 3 4 5 6                                     7   pos=6 ,   6    pos = 5,  5 pos = 4,  3 pos = 3
-                           
-tab1+1     7,6,1,2,3,5,0
- 
-pos  0 1  2 3 4 5 6                                    7    pos=0 ,   6   pos = 1,   5 pos = 5, 3 pos =  4 */
-
-function rotate(array, stepsToShift) {
-
-    for (var i = 0; i < stepsToShift; i++) {
-        array.unshift(array.pop());
-    }
-
-    return array;
+function shift(arr, direction, n) {
+   var times = n > arr.length ? n % arr.length : n;
+   return arr.concat(arr.splice(0, (direction > 0 ? arr.length - times : times)));
 }
-tab = [1,2,3,4,5,6,7];
-rotate(tab, 6);
+tab = [1,2,3,4,5];
+shift(tab, 1, 1);
