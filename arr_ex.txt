@@ -1,0 +1,56 @@
+let tab = ["a","b","c","d","e","f","g"];
+var size = tab.length;
+let i = 0;
+var k = 0;
+let nbre = 0;
+let permut1 = 0;
+let permut2 = 0
+var taille = size;
+while(i < size)
+     { 
+       if(i == 0)
+         {
+           console.log("size tableau" + " " + taille)
+             //permutation
+           permut1 = tab[0];
+           tab[0] = tab[size-1];
+           tab[size-1] = permut1;
+           console .log("tab[0]" + " " + tab[0] + " " + "tab[6]" + " " + tab[size-1]);
+         }
+      if(i == 1)
+         {
+           console.log("size tableau" + " " + taille)
+             //permutation
+           permut2 = tab[1];
+           tab[1] = tab[size-2];
+           tab[size-2] = permut2;
+           console .log("tab[1]" + " " + tab[1] + " " + "tab[5]" + " " + tab[size-2]);
+         }
+       i++;
+      }
+tab;
+       else
+           {
+            k = i + 1;
+            if(tab[k])
+             {
+               tab[k]= tab[i];
+             }
+           }
+     i++
+     }  // end while
+
+tab;
+/*
+                                                         n = 7
+
+     0,1,2,3,5,6,7
+
+pos  0 1 2 3 4 5 6                                     7   pos=6 ,   6    pos = 5,  5 pos = 4,  3 pos = 3
+                           
+     7,6,1,2,3,5,0
+ 
+pos  0 1  2 3 4 5 6                                    7    pos=0 ,   6   pos = 1,   5 pos = 5, 3 pos =  4 */
+
+
+
